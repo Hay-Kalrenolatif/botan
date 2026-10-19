@@ -61,13 +61,13 @@ class Logo extends StatelessWidget {
       );
 }
 
-class Box extends StatefulWidget {
+class Panel extends StatefulWidget {
   final Widget child;
   final VoidCallback? onTap;
   final Color? borderColor;
   final EdgeInsetsGeometry padding;
 
-  const Box(
+  const Panel(
     this.child, {
     super.key,
     this.onTap,
@@ -76,10 +76,10 @@ class Box extends StatefulWidget {
   });
 
   @override
-  State<Box> createState() => _BoxState();
+  State<Panel> createState() => _PanelState();
 }
 
-class _BoxState extends State<Box> {
+class _PanelState extends State<Panel> {
   bool _pressed = false;
 
   @override

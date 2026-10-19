@@ -114,14 +114,16 @@ class _ShellState extends State<Shell> {
                 ),
               ],
             ),
+
             child: LayoutBuilder(
               builder: (context, box) {
                 final slot = box.maxWidth / 4;
-                const size = 46.0;
+                const size = 44.0;
+
                 return Stack(
                   alignment: Alignment.centerLeft,
                   children: [
-                    // Sliding pill glow indicator
+                    // Sliding pill indikator :v
                     AnimatedPositioned(
                       duration: const Duration(milliseconds: 340),
                       curve: Curves.easeOutCubic,

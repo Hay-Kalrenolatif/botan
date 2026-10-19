@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hive_ce_flutter/hive_ce_flutter.dart';
 import '../theme.dart';
-import '../models/pc_item.dart';
-import '../models/support_item.dart';
-import '../models/repair_log.dart';
 import '../services/hive_database_service.dart';
 import '../widgets/common.dart';
 import '../widgets/ring.dart';
@@ -79,7 +76,7 @@ class SummaryPage extends StatelessWidget {
                     const SizedBox(height: 18),
 
                     // Concentric Rings Status
-                    Box(
+                    Panel(
                       Column(
                         children: [
                           Ring(
@@ -128,7 +125,7 @@ class SummaryPage extends StatelessWidget {
 
                     // Peringatan Cepat (jika ada unit rusak)
                     if (hasIssues)
-                      Box(
+                      Panel(
                         Row(
                           children: [
                             Container(
@@ -165,7 +162,7 @@ class SummaryPage extends StatelessWidget {
                     const SizedBox(height: 10),
 
                     // Card 1: PC Management
-                    Box(
+                    Panel(
                       Row(
                         children: [
                           Container(
@@ -214,7 +211,7 @@ class SummaryPage extends StatelessWidget {
                     ),
 
                     // Card 2: Support Inventory
-                    Box(
+                    Panel(
                       Row(
                         children: [
                           Container(
@@ -263,7 +260,7 @@ class SummaryPage extends StatelessWidget {
                     ),
 
                     // Card 3: Repair Log
-                    Box(
+                    Panel(
                       Row(
                         children: [
                           Container(

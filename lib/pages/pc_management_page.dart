@@ -358,7 +358,7 @@ class _PCManagementPageState extends State<PCManagementPage> {
     final isNormal = pc.isNormal;
     final color = isNormal ? mint : org;
 
-    return Box(
+    return Panel(
       Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -431,7 +431,7 @@ class _PCManagementPageState extends State<PCManagementPage> {
               children: [
                 Row(
                   children: [
-                    const Icon(Icons.memory_rounded, size: 14, color: Colors.white45),
+                    const Icon(Icons.memory_rounded, size: 14, color: Colors.white54),
                     const SizedBox(width: 6),
                     Expanded(child: tx('Prosesor', 12, c: Colors.white54)),
                     tx(pc.processor, 12, w: FontWeight.w600, c: Colors.white),
@@ -440,7 +440,7 @@ class _PCManagementPageState extends State<PCManagementPage> {
                 const SizedBox(height: 6),
                 Row(
                   children: [
-                    const Icon(Icons.storage_rounded, size: 14, color: Colors.white45),
+                    const Icon(Icons.storage_rounded, size: 14, color: Colors.white54),
                     const SizedBox(width: 6),
                     Expanded(child: tx('RAM', 12, c: Colors.white54)),
                     tx(pc.ram, 12, w: FontWeight.w600, c: yel),
@@ -451,7 +451,7 @@ class _PCManagementPageState extends State<PCManagementPage> {
                   Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const Icon(Icons.sticky_note_2_outlined, size: 14, color: Colors.white45),
+                      const Icon(Icons.sticky_note_2_outlined, size: 14, color: Colors.white54),
                       const SizedBox(width: 6),
                       Expanded(child: tx('Catatan', 12, c: Colors.white54)),
                       Expanded(

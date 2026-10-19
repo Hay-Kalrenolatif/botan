@@ -1,6 +1,0 @@
-{
-  "name": "LTrack - Computer Lab Inventory",
-  "description": "Sistem manajemen inventaris laboratorium komputer, spesifikasi PC, barang pendukung, dan log perbaikan teknisi dengan database lokal Hive CE.",
-  "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
-}

@@ -1,8 +1,29 @@
+# Dependencies
 node_modules/
+
+# Build output
 build/
 dist/
 coverage/
+
+# OS / logs
 .DS_Store
 *.log
-.env*
+
+# Environment variables (keep .env.example tracked)
+.env
+.env.local
+.env.*.local
 !.env.example
+
+# Dart / Flutter
+.dart_tool/
+.packages
+.flutter-plugins
+.flutter-plugins-dependencies
+
+# IDE
+.idea/
+*.iml
+*.ipr
+*.iws

@@ -224,7 +224,7 @@ class _SupportInventoryPageState extends State<SupportInventoryPage> {
 
     return ValueListenableBuilder(
       valueListenable: db.supportBox.listenable(),
-      builder: (context, Box box, _) {
+      builder: (context, box, _) {
         final allItems = db.getAllSupportItems();
         final filtered = allItems.where((item) {
           if (filterIndex == 1) return item.isGood;
@@ -316,7 +316,7 @@ class _SupportInventoryPageState extends State<SupportInventoryPage> {
   Widget _buildSupportCard(BuildContext context, SupportItem item) {
     final col = item.isGood ? mint : (item.condition == 'Perlu Cek' ? yel : org);
 
-    return Box(
+    return Panel(
       Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [

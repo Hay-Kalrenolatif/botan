@@ -243,7 +243,7 @@ class RepairLogPage extends StatelessWidget {
   }
 
   Widget _buildLogCard(BuildContext context, RepairLog item) {
-    return Box(
+    return Panel(
       Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -315,11 +315,11 @@ class RepairLogPage extends StatelessWidget {
                   ],
                 ),
                 const SizedBox(height: 4),
-                tx(item.action, 12, c: Colors.white90),
+                tx(item.action, 12, c: Colors.white70),
                 const SizedBox(height: 8),
                 Row(
                   children: [
-                    const Icon(Icons.person_outline_rounded, size: 14, color: Colors.white45),
+                    const Icon(Icons.person_outline_rounded, size: 14, color: Colors.white54),
                     const SizedBox(width: 5),
                     tx('Teknisi: ${item.technician}', 11, c: Colors.white60, w: FontWeight.w600),
                   ],

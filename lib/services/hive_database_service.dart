@@ -1,10 +1,9 @@
-import 'package:flutter/foundation.dart';
 import 'package:hive_ce_flutter/hive_ce_flutter.dart';
 import '../models/pc_item.dart';
 import '../models/support_item.dart';
 import '../models/repair_log.dart';
 
-/// Service manajemen local database berbasis Hive Community Edition (Hive CE)
+/// Service manajemen local database berbasis Hive Community Edition
 /// Menggunakan 3 box Hive terpisah:
 /// 1. 'pc_box'      : Manajemen unit PC & spesifikasi
 /// 2. 'support_box' : Inventaris barang pendukung laboratorium
