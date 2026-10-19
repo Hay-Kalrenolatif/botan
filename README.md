@@ -1,10 +1,11 @@
-# LTrack
+# LTrack :>
 
 Sistem manajemen inventaris laboratorium komputer: spesifikasi PC, barang
 pendukung, dan log perbaikan teknisi dengan database lokal (Hive Community
 Edition / Hive CE).
 
 Dibangun dengan Flutter.
+Diperuntukan sebagai aplikasi Mobile, tapi web juga bisa harusnya.
 
 ## Menjalankan
 
