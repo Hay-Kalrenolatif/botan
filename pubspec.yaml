@@ -13,6 +13,10 @@ dependencies:
   # Local Embedded Database (Hive Community Edition)
   hive_ce: ^2.22.0
   hive_ce_flutter: ^2.5.0
+  # Simpan status onboarding (sudah dilihat / belum)
+  shared_preferences: ^2.3.5
+  # Render SVG ilustrasi onboarding
+  flutter_svg: ^2.0.17
 
 dev_dependencies:
   flutter_test:
@@ -23,3 +27,6 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+
+  assets:
+  - assets/images/

@@ -101,7 +101,7 @@ class _SupportInventoryPageState extends State<SupportInventoryPage> {
                     Padding(
                       padding: const EdgeInsets.only(right: 6),
                       child: ActionChip(
-                        label: tx('+$val', 11, c: mint, w: FontWeight.w600),
+                        label: tx('+$val', 11, c: const Color.fromARGB(255, 168, 230, 216), w: FontWeight.w600),
                         backgroundColor: a(mint, 0.1),
                         side: BorderSide(color: a(mint, 0.2)),
                         padding: EdgeInsets.zero,
@@ -372,7 +372,7 @@ class _SupportInventoryPageState extends State<SupportInventoryPage> {
           ),
           const SizedBox(height: 10),
 
-          // Quick Quantity Adjuster Row
+          // Quick Quantity
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
             decoration: BoxDecoration(

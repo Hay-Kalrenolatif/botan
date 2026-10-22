@@ -25,7 +25,7 @@ class Ring extends StatelessWidget {
           ),
         ),
       );
-}
+    }
 
 class RP extends CustomPainter {
   final List<double> v;
@@ -44,7 +44,7 @@ class RP extends CustomPainter {
       if (r <= w) break;
       final rect = Rect.fromCircle(center: center, radius: r);
 
-      // Background track
+      // Background
       final trackPaint = Paint()
         ..style = PaintingStyle.stroke
         ..strokeWidth = w

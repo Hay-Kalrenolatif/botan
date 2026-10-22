@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import './services/hive_database_service.dart';
 import './theme.dart';
+import './onboarding/onboarding_page.dart';
 import './pages/summary_page.dart';
 import './pages/pc_management_page.dart';
 import './pages/support_inventory_page.dart';
@@ -29,9 +31,57 @@ void main() async {
           surfaceTintColor: Colors.transparent,
         ),
       ),
-      home: const Shell(),
+      home: const OnboardingGate(),
     ),
   );
+}
+
+/// Gate yang menentukan layar pertama: Onboarding jika belum pernah dilihat,
+/// kemudian Shell (layar utama). Status disimpan ke SharedPreferences.
+class OnboardingGate extends StatefulWidget {
+  const OnboardingGate({super.key});
+
+  @override
+  State<OnboardingGate> createState() => _OnboardingGateState();
+}
+
+class _OnboardingGateState extends State<OnboardingGate> {
+  bool _seen = false;
+  bool _loading = true;
+
+  @override
+  void initState() {
+    super.initState();
+    _check();
+  }
+
+  Future<void> _check() async {
+    final prefs = await SharedPreferences.getInstance();
+    if (!mounted) return;
+    setState(() {
+      _seen = prefs.getBool('ltrack_onboarding_seen') ?? false;
+      _loading = false;
+    });
+  }
+
+  Future<void> _complete() async {
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setBool('ltrack_onboarding_seen', true);
+    if (!mounted) return;
+    setState(() => _seen = true);
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    if (_loading) {
+      return const Scaffold(
+        backgroundColor: bg,
+        body: Center(child: CircularProgressIndicator(color: mint)),
+      );
+    }
+    if (_seen) return const Shell();
+    return OnboardingPage(onCompleted: _complete);
+  }
 }
 
 class Shell extends StatefulWidget {
